@@ -1,0 +1,356 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP804 - Assessment Task 3</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 20px;
+        }
+        .heading-group {
+            border: 9px double #007BFF; 
+            background-color: #ff9e67; 
+            padding: 20px; 
+            border-radius: 8px;    
+        }
+        .heading-group h1 {
+            color: rgb(0, 253, 253);
+            padding-bottom: 10px;
+        }
+        .heading-group h2 {
+            color: rgb(5, 143, 78);
+            border-style: none;
+        }      
+        .heading-group h3 {
+            color: rgb(141, 0, 134);
+            padding-bottom: 6px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 14px inset #0980ff;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #59007c;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+            font-style: unset;
+            
+        }
+                tr:nth-child(even) {
+            background-color: #426369;
+            color: #ff0000;
+            font-style: italic;
+        }
+        tr:nth-child(odd) {
+            background-color: #f07a7a;
+            color: rgb(217, 255, 0);
+            font-family: 'Fantasy';
+            font-style: bold;
+            
+        }
+        img {
+            width: 100px;
+            display: none;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        #task3 table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        #task3 th, #task3 td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #task3 th {
+            background-color: #007BFF; 
+            color: white; 
+        }
+        #task3 tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+        #task3 tr:hover {
+            background-color: #ddd; 
+        }
+        #task3 img {
+            width: 200px; 
+            height: auto; 
+            display: block;
+            margin: 5px 0;
+        }
+        #task3 a {
+            color: #007BFF; 
+        }
+    </style>
+    <script>
+        function handleClick(buttonId) {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => btn.classList.remove('highlight'));
+
+            const images = document.querySelectorAll('img');
+            images.forEach(img => img.style.display = 'none');
+
+            document.getElementById(buttonId).classList.add('highlight');
+
+            const message = document.getElementById('message');
+            message.textContent = `User clicks ${buttonId.charAt(0).toUpperCase() + buttonId.slice(1)}`;
+
+            document.getElementById('image').src = `images/${buttonId}.jpg`;
+            document.getElementById('image').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<!--Task 1-->
+<h1-head> Task 1</h1-head>
+    <section id="task1">
+        <div class="heading-group">
+                        <h1> 8850471 Michael George Poulos</h1>
+            <h2> COMP804: Web Security</h2>
+            <h3> Assessment Task 3, Assignment 1, due 11:00PM on Monday the 19th of August, 2024.</h3>
+        </div>
+    </section>
+
+<!-- Task 2-->  
+<h1-head> Task 2</h1-head> 
+    <body>
+        <section id="task2">
+            <h2>Key Dates - University of Wollongong - UOW</h2>
+            <table cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th style="width: 70%;">Activity</th>
+                        <th style="width: 30%;">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>First day to enrol for re-enrolling (continuing students)</td>
+                        <td>20 Nov 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Orientation</td>
+                        <td>16 Jul 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Lectures Commence (weeks 1-10)</td>
+                        <td>22 Jul - 27 Sep 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Last day to enrol / add subjects yourself</td>
+                        <td>02 Aug 2024</td>
+                    </tr>
+                    <tr>
+                        <td>Last day to enrol / add subjects with Head of Students approval (extenuating circumstances only)</td>
+                        <td>09 Aug 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>CENSUS DATE</strong>
+                            <ul>
+                                <li>Fees due</li>
+                                <li>Last day to withdraw from subject/s without paying for them</li>
+                                <li>HECS / FEE HELP debt reporting date</li>
+                                <li>Last day to change HECS / FEE HELP billing option</li>
+                            </ul>
+                            <p><a href="https://uowedu.service-now.com/kb?id=kb_article_view&amp;sysparm_article=KB0012659">Learn more about Census date &gt;</a></p>
+                        </td>
+                        <td>31 Mar 2024</td>
+                    <tr>
+                        <td>
+                        <div>Student Services and Amenities Fees Due</div>
+                        </td>
+                        <td>01 Apr 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+<!-- Task 3 -->
+<h1-head> Task 3</h1-head>
+    <section id="task3">
+        <h2>Web Attacks Table</h2>
+        <section id="task3">
+                <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Web Attacks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SQL Injection
+                        <img src="./images/injection-attack.jpg" alt="injection-attack">
+                        <a href="https://www.sitepoint.com/how-to-protect-your-website-against-sql-injection-attacks/" target="_blank">Source: https://www.sitepoint.com/</a> </p>
+                        </td>
+                            <td>
+                            <p>SQL Injection is a code injection technique that exploits a vulnerability in an application's software where it allows attackers to manipulate database queries and usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database.
+                            </p> 
+                            <a href="https://www.w3schools.com/sql/sql_injection.asp" target="_blank">Source: https://www.w3schools.com/sql/sql_injection.asp</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>XSS (Cross-Site Scripting)
+                        <img src="./Images/XSS.jpg" alt="XSS">
+                        <a href="https://evalian.co.uk/xxs-attacks-what-is-cross-site-scripting-and-why-is-it-a-security-risk/" target="_blank">Source: https://evalian.co.uk/xxs-attacks-what-is-cross-site-scripting-and-why-is-it-a-security-risk/</a>
+                        </td>
+                            <td>
+                            <p>An attacker can use XSS to send a malicious script to an unsuspecting user where the end user’s browser has no way to know that the script should not be trusted, and will execute the script because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site.</p>
+                            <a href="https://owasp.org/www-community/attacks/xss/" target="_blank">Source: https://owasp.org/www-community/attacks/xss/</a>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Broken Authentication
+                        <img src="./images/Broken-Authentication.jpg" alt="Broken-Authentication">
+                        <a href="https://prophaze.com/web-application-firewall/what-is-broken-authentication/" target="_blank">Source: https://prophaze.com/web-application-firewall/what-is-broken-authentication/</a> </p>
+                        </td>
+                            <td>
+                            <p>Broken authentication or any sort of illegitimate login–based access can be executed in many ways, such as with brute forcing passwords, credential stuffing, with dictionary attacks and in many other ways. There are many ways to gain access to accounts however a long and sophisticated password is greatly beneficial to combat these attacks, as well as using two factor authentication.</p> 
+                            <a href="https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself" target="_blank">Source: https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Man in the middle attacks
+                        <img src="./images/MITM.jpg" alt="Man in the middle">
+                        <a href="https://threatcop.com/blog/man-in-the-middle-attack/" target="_blank">Source: https://threatcop.com/blog/man-in-the-middle-attack/</a> </p>
+                        </td>
+                            <td>
+                            <p>Man in the middle attacks are common among sites that have not encrypted their data as it travels from the user to the servers (sites using HTTP instead of HTTPS) and also is completed by the threat actor who intercepts the data as it is being transferred between two parties. If the data isn't encrypted, the attacker can easily read personal, login, or other sensitive details that travel between two locations on the Internet.</p> 
+                            <a href="https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself#:~:text=injection%20or%20XSS.-,9,-.%20MiTM%20(Man%2Din" target="_blank">Source: https://www.tripwire.com/state-of-security/most-common-website-security-attacks-and-how-to-protect-yourself#:~:text=injection%20or%20XSS.-,9,-.%20MiTM%20(Man%2Din</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Directory Traversal
+                        <img src="./images/directory-traversal-attack.jpg" alt="Directory traversal">
+                        <a href="https://www.insecure.in/directory-traversal-attack" target="_blank">Source: https://www.insecure.in/directory-traversal-attack</a> </p>
+                        </td>
+                            <td>
+                            <p>A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder through manipulating variables that reference files with “dot-dot-slash (../)” sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files. </p> 
+                            <a href="https://owasp.org/www-community/attacks/Path_Traversal" target="_blank">Source: https://owasp.org/www-community/attacks/Path_Traversal</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Unicode encoding
+                        <img src="./images/unicode.jpg" alt="Unicode encoding">
+                        <a href="https://hackaday.com/2013/09/27/utf-8-the-most-elegant-hack/" target="_blank">Source: https://hackaday.com/2013/09/27/utf-8-the-most-elegant-hack/</a> </p>
+                        </td>
+                            <td>
+                            <p>The attack aims to explore flaws in the decoding mechanism implemented on applications when decoding Unicode data format where an attacker can use this technique to encode certain characters in the URL to bypass application filters, thus accessing restricted resources on the Web server or to force browsing to protected pages. </p> 
+                            <a href="https://owasp.org/www-community/attacks/Unicode_Encoding" target="_blank">Source: https://owasp.org/www-community/attacks/Unicode_Encoding</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Repudiation attack
+                        <img src="./images/repudiation.jpg" alt="Repudiation attack">
+                        <a href="https://softwareg.com.au/blogs/internet-security/non-repudiation-in-network-security/" target="_blank">Source: https://softwareg.com.au/blogs/internet-security/non-repudiation-in-network-security</a> </p>
+                        </td>
+                            <td>
+                            <p>A repudiation attack occurs when a user or system denies having performed a particular action or transaction, thereby undermining accountability and traceability through exploiting the absence of proper tracking and logging mechanisms, allowing malicious actors to manipulate or forge the identification of actions. As a result, the data stored in log files can become invalid or misleading, making it difficult to establish responsibility for specific activities.</p> 
+                            <a href="https://www.twingate.com/blog/glossary/repudiation%20attack" target="_blank">Source: https://www.twingate.com/blog/glossary/repudiation%20attack</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Denial of Serive (DOS)
+                        <img src="./images/DOS.png" alt="Denial of Service">
+                        <a href="https://www.researchgate.net/figure/Denial-of-Service-DoS-attack-A-DDoS-Distributed-Denial-of-Service-attack-as-shown-in_fig2_324562008" target="_blank">Source: https://www.researchgate.net/figure/Denial-of-Service-DoS-attack-A-DDoS-Distributed-Denial-of-Service-attack-as-shown-in_fig2_324562008</a> </p>
+                        </td>
+                            <td>
+                            <p>A denial-of-service (DoS) attack is a type of cyber attack in which a malicious actor aims to render a computer or other device unavailable to its intended users by interrupting the device's normal functioning through temporarily or indefinitely disrupting services of a hose connected to a network through using multiple computers or machines to flood a targeted resource.</p> 
+                            <a href="https://owasp.org/www-community/attacks/Denial_of_Service" target="_blank">Source: https://owasp.org/www-community/attacks/Denial_of_Service</a> </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Trojan Horse
+                        <img src="./images/trojan.png" alt="Trojan Horse">
+                        <a href="https://www.shiksha.com/online-courses/articles/trojan-horse-attack/" target="_blank">Source: https://www.shiksha.com/online-courses/articles/trojan-horse-attack/</a> </p>
+                        </td>
+                            <td>
+                            <p>A Trojan Horse is a program that uses malicious code masqueraded as a trusted application. The malicious code can be injected on benign applications, masqueraded in e-mail links, or sometimes hidden in JavaScript pages to make furtive attacks against vulnerable internet Browsers.</p> 
+                            <a href="https://owasp.org/www-community/attacks/Trojan_Horse" target="_blank">Source: https://owasp.org/www-community/attacks/Trojan_Horse.org/www-community/attacks/Denial_of_Service</a> </p>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Spyware
+                        <img src="./images/spyware.png" alt="Spyware">
+                        <a href="https://www.chargebackgurus.com/blog/spyware" target="_blank">Source: https://www.chargebackgurus.com/blog/spyware</a> </p>
+                        </td>
+                            <td>
+                            <p>Spyware is a program that captures statistical information from a user’s computer and sends it over internet without user acceptance. This information is usually obtained from cookies and the web browser’s history. Spyware can also install other software, display advertisements, or redirect the web browser activity. Spyware differs from a virus, worm, and adware in various ways. Spyware does not self-replicate and distribute itself like viruses and worms, and does not necessarily display advertisements like adware.</p> 
+                            <a href="https://owasp.org/www-community/attacks/Spyware" target="_blank">Source: https://owasp.org/www-community/attacks/Spyware</a> </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+<!-- Task 4 -->
+<h1-head> Task 4</h1-head>
+    <section id="task4">
+        <h2>JavaScript with button</h2>
+        <div id="buttons">
+            <button id="catButton">Cat</button>
+            <button id="dogButton">Dog</button>
+            <button id="birdButton">bird</button>
+        </div>
+        <input type="text" id="textField" readonly>
+        <div id="message"></div>
+        <div id="imageContainer"></div>
+    </section>
+
+    <script>
+        document.getElementById("catButton").addEventListener("click", function() {
+            displayAnimal("Cat", "User clicks Cat", "cat.png");
+        });
+
+        document.getElementById("dogButton").addEventListener("click", function() {
+            displayAnimal("Dog", "User clicks Dog", "dog.png");
+        });
+
+        document.getElementById("birdButton").addEventListener("click", function() {
+            displayAnimal("bird", "User clicks bird", "bird.png");
+        });
+
+        function displayAnimal(animal, message, image) {
+            
+            document.querySelectorAll("#buttons button").forEach(button => {
+                button.style.backgroundColor = ""; 
+            });
+            document.getElementById(animal.toLowerCase() + "Button").style.backgroundColor = "yellow";
+
+            
+            document.getElementById("textField").value = message;
+            document.getElementById("message").innerText = animal + " is clicked";
+
+            
+            document.getElementById("imageContainer").innerHTML = `<img src="images/${image}" alt="${animal}">`;
+            
+            var animalImage = document.getElementById('animalImage');
+            animalImage.src = 'images/' + imageFile;
+            animalImage.style.display = 'block';
+        }
+    </script>
+    <h3>Images are self made</h3>
+    </section>
+
+<!-- Task 5 -->
